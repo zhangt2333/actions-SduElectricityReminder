@@ -9,6 +9,10 @@ import re
 import sys
 import spider
 
+
 if __name__ == '__main__':
     data = json.loads(re.sub('#(.*)\n', '\n', sys.argv[1]).replace("'", '"'))
-    print(spider.query(data['account'], data['building'], data['room']))
+    electricity = spider.query(data['account'], data['building'], data['room'])
+    print('当前电量:', electricity)
+    if electricity < data['threshold']:
+        exit(-1)
