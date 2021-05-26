@@ -6,6 +6,7 @@
 ## 简介
 
 每天定时自动查询 [青岛校区] 宿舍电量，低电量提醒！！！
+* 不需要自己购买服务器，也不需要自己配置服务器，Serverless !!
 * 如想修改定时运行的时间，可修改 `.github/workflows/SduElectricityReminder.yml` 中 `schedule` 属性。
 
 
