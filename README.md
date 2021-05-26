@@ -1,5 +1,5 @@
 <div align="center">
-<h1 align="center">SDU青岛校区电量自动查询，低电提醒</h1>
+<h1 align="center">SDU 青岛校区电量自动查询，低电提醒</h1>
 </div>
 
 
@@ -30,7 +30,7 @@ Fork 本项目: [zhangt2333/actions-SduElectricityReminder](https://github.com/z
     * `building`: 宿舍楼, 只能从 ['T1', 'T3', 'S1一多书院', 'S2从文书院', 'S5凤凰居5号楼', 'S6凤凰居6号楼', '凤凰居6号楼', 'S7凤凰居7号楼', 'S8凤凰居8号楼', 'S9凤凰居9号楼', '凤凰居9号楼', 'S10凤凰居10号楼', 'S11'] 中选一个
     * `room`: 宿舍号，一般是 A/B + 3位数字的格式
     * `threshold`: 电量低于多少会报警
-```json
+```
 {
     'account': '000000',
     'building': 'S2从文书院',
