@@ -28,7 +28,9 @@ jobs:
         uses: zhangt2333/actions-easyconnect@main
         with:
           CLI_OPTS: ${{ secrets.CLI_OPTS }}
+          RETRY: 3
+          SLEEP_AFTER_LOGIN: 1
           # 先通链路再运行脚本
           SCRIPT: |
-            curl -m 5 --retry 5 -s -o /dev/null http://10.100.1.24:8988/web/Common/Tsm.html
+            curl -m 3 --retry 3 -s -o /dev/null http://10.100.1.24:8988/web/Common/Tsm.html
             python Electricity-Spider/main.py "${{ secrets.DATA }}"

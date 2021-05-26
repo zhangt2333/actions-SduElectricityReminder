@@ -114,7 +114,7 @@ def query(account, building, room) -> float:
         "json": "true"
     }
     try:
-        response = requests.post('http://10.100.1.24:8988/web/Common/Tsm.html', headers=HEADERS, data=data)
+        response = requests.post('http://10.100.1.24:8988/web/Common/Tsm.html', headers=HEADERS, data=data, timeout=3)
         if response.status_code == 200:
             electricity = json.loads(response.text)['query_elec_roominfo']['errmsg']
             return float(electricity[8:])
