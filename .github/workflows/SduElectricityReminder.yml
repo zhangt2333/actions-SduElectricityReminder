@@ -7,7 +7,7 @@ on:
     - cron: '0 9 * * *' # GMT+8 17:00
 
 jobs:
-  start:
+  sdu-electricity-spider:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
@@ -28,5 +28,7 @@ jobs:
         uses: zhangt2333/actions-easyconnect@main
         with:
           CLI_OPTS: ${{ secrets.CLI_OPTS }}
+          # 先通链路再运行脚本
           SCRIPT: |
+            curl -m 5 --retry 5 -s -o /dev/null http://10.100.1.24:8988/web/Common/Tsm.html
             python Electricity-Spider/main.py "${{ secrets.DATA }}"
