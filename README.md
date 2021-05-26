@@ -55,7 +55,7 @@ Fork 本项目: [zhangt2333/actions-SduElectricityReminder](https://github.com/z
 
 ## Credits
 
-* https://github.com/Yuandiaodiaodiao/sdu-electric-charge 提供最基本的电量查询爬虫
-* https://github.com/Hagb/docker-easyconnect 使用 docker 封装 easyconnect
+* https://github.com/Yuandiaodiaodiao/sdu-electric-charge 提供的电量查询爬虫
+* https://github.com/Hagb/docker-easyconnect 提供 docker 封装 easyconnect
 * https://github.com/zhangt2333/SDU-Funny-Scripts 有很多有关 SDU 校园生活的爬虫/脚本
 * https://github.com/zhangt2333/actions-easyconnect 提供在 easyconnect 中运行代码的 Github Actions
