@@ -1,10 +1,11 @@
 name: SduElectricityReminder
 
 on:
-  watch:
-    types: [started]
+  push:
+    branches:
+      - main
   schedule:
-    - cron: '0 9 * * *' # GMT+8 17:00
+    - cron: '0 8,9,10 * * *'  # GMT+8 16:00 17:00 18:00
 
 jobs:
   sdu-electricity-spider:
@@ -28,8 +29,9 @@ jobs:
         uses: zhangt2333/actions-easyconnect@main
         with:
           CLI_OPTS: ${{ secrets.CLI_OPTS }}
-          RETRY: 3
+          RETRY: 2
           SLEEP_AFTER_LOGIN: 1
+          EXPECTED_EXIT_CODE: 66
           # 先通链路再运行脚本
           SCRIPT: |
             curl -m 3 --retry 3 -s -o /dev/null http://10.100.1.24:8988/web/Common/Tsm.html

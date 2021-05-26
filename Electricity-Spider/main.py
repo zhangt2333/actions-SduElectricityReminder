@@ -15,4 +15,4 @@ if __name__ == '__main__':
     electricity = spider.query(data['account'], data['building'], data['room'])
     print('当前电量:', electricity)
     if electricity < data['threshold']:
-        exit(-1)
+        exit(66)
