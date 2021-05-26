@@ -54,6 +54,10 @@ Fork 本项目: [zhangt2333/actions-SduElectricityReminder](https://github.com/z
 
 ![](README/img4.png)
 
+### 5. 配置自己账号的邮件提醒
+* 如下图正确配置，这样运行失败（电量过低）的 Github Actions 事件会自动邮件通知你
+![](README/img5.png)
+
 ## Credits
 
 * https://github.com/Yuandiaodiaodiao/sdu-electric-charge 提供的电量查询爬虫
